@@ -1,0 +1,9 @@
+# MakeCode Python
+
+serial.redirect_to_usb()
+
+def on_forever():
+    basic.show_number(0)
+    serial.write_line("" + str((input.temperature())))
+    serial.write_line("" + str((input.light_level())))
+basic.forever(on_forever)
